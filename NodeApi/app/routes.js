@@ -42,6 +42,9 @@ module.exports = function(router) {
 	router.route('/areas/getNearby/:lat/:lng/:distance')
 		.get(areas.getAreasNearby);
 
+	router.route('/areas/getByBusyOption/:category/:option/:day/:time/:page([0-9]+)/:limit([0-9]+)/:lat/:lng')
+		.get(areas.getAreasByBusyOption);
+
 	router.route('/areas/test')
 		.get(areas.test);
 
