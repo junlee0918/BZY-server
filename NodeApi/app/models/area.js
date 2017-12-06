@@ -41,7 +41,7 @@ var areasSchema = new Schema({
     type:{type:String},
     coordinates:[Number]
   }
-}, {collection: 'AreaList' });
+}, {collection: 'NewAreaList' });
 areasSchema.index({ "location": "2dsphere" });
 areasSchema.plugin(mongoosePaginate);
 
